@@ -1,5 +1,6 @@
-from bot.config.config import load_config
 import psycopg
+from bot.config.config import load_config
+
 config_crate_baza = load_config()
 baza = config_crate_baza.DBConfig.dbName
 user = config_crate_baza.DBConfig.dbUser
