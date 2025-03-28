@@ -1,9 +1,9 @@
 import threading
 
 from aiogram import Bot
-from parser.parseWB2 import ParseWB2
+from bot.parser.parseWB2 import ParseWB2
 from bot.db.parseDB import ParseDB
-from parser.parserOzon import ParseOzon
+from bot.parser.parserOzon import ParseOzon
 import concurrent.futures
 import asyncio
 from asyncio import Semaphore

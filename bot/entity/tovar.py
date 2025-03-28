@@ -7,9 +7,8 @@ from bot.db.dbEntity.userDB import UserDb
 from bot.db.dbEntity.magazinDB import MagazinDB
 from bot.db.dbEntity.tovarDB import TovarDB
 import re
-from datetime import datetime
-from parser.parseWB import ParseWB
-from parser.parserOzon import ParseOzon
+from bot.parser.parseWB import ParseWB
+from bot.parser.parserOzon import ParseOzon
 from bot.db.dbEntity.podpiskaDB import PodpiskaDB
 
 

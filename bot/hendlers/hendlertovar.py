@@ -7,14 +7,6 @@ from bot.state import stateAddTovar
 #from bot.db.hendlers.addTovar import addTovarHandler
 from bot.entity.tovar import Tovar
 from bot.keyboard.buttonTovar import keyboardAddTovar
-from bot.db.dbEntity.userDB import UserDb
-from bot.db.dbEntity.magazinDB import MagazinDB
-from bot.db.dbEntity.tovarDB import TovarDB
-import re
-from datetime import datetime
-from parser.parseWB import ParseWB
-from parser.parserOzon import ParseOzon
-from bot.db.dbEntity.podpiskaDB import PodpiskaDB
 
 tovarRouter = Router()
 
