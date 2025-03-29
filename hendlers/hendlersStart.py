@@ -1,9 +1,9 @@
 from aiogram import Router
 from aiogram.types import Message
 from aiogram.filters import CommandStart
-from bot.db.dbEntity.userDB import UserDb
-from bot.keyboard.buttonTovar import keyboardAddTovar
-from bot.db.dbEntity.podpiskaDB import PodpiskaDB
+from db.dbEntity.userDB import UserDb
+from keyboard.buttonTovar import keyboardAddTovar
+from db.dbEntity.podpiskaDB import PodpiskaDB
 
 startRouter = Router()
 

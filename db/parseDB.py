@@ -1,6 +1,5 @@
 import psycopg
 
-from bot.db.db_connect import dbConnection
 
 #Получаем данные по товарам валдберис для работы парсера
 class ParseDB:

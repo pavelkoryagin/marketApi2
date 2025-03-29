@@ -1,11 +1,9 @@
 import asyncio
-from asyncio import CancelledError
 from asyncio import Semaphore
 from aiohttp import ClientSession
 import aiohttp
 from fake_useragent import UserAgent
-from random import randint
-from bot.db.parseDB import startParseLoadWB, loadParseWBPrizeNew
+from db.parseDB import startParseLoadWB
 import time
 
 

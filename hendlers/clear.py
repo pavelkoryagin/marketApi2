@@ -1,9 +1,9 @@
 from aiogram.filters.command import Command
 from aiogram.types import Message, CallbackQuery
-from bot.db.dbEntity.tovarDB import TovarDB
-from bot.db.dbEntity.userDB import UserDb
+from db.dbEntity.tovarDB import TovarDB
+from db.dbEntity.userDB import UserDb
 from aiogram import Router, F
-from bot.keyboard.buttonTovar import keyboardAddTovar, DeleteOneTovarCallbackFactory
+from keyboard.buttonTovar import keyboardAddTovar, DeleteOneTovarCallbackFactory
 
 clearRouter = Router()
 

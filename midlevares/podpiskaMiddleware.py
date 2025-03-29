@@ -1,12 +1,9 @@
-import time
-from aiogram.types import Message
 from typing import Any, Awaitable, Callable, Dict
 from aiogram import BaseMiddleware
 from aiogram.types import TelegramObject, User
-import psycopg
-from bot.db.dbEntity.tovarDB import TovarDB
-from bot.db.dbEntity.podpiskaDB import PodpiskaDB
-from bot.db.dbEntity.userDB import UserDb
+from db.dbEntity.tovarDB import TovarDB
+from db.dbEntity.podpiskaDB import PodpiskaDB
+from db.dbEntity.userDB import UserDb
 
 
 class PodpiskaMiddleware(BaseMiddleware):

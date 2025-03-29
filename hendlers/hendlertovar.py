@@ -3,10 +3,10 @@ from aiogram.filters import Command, StateFilter
 from aiogram.types import Message, CallbackQuery
 from aiogram.fsm.context import FSMContext
 from aiogram.fsm.state import default_state
-from bot.state import stateAddTovar
+from state import stateAddTovar
 #from bot.db.hendlers.addTovar import addTovarHandler
-from bot.entity.tovar import Tovar
-from bot.keyboard.buttonTovar import keyboardAddTovar
+from entity.tovar import Tovar
+from keyboard.buttonTovar import keyboardAddTovar
 
 tovarRouter = Router()
 

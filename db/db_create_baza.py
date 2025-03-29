@@ -1,5 +1,6 @@
-from bot.config.config import load_config
+from config.config import load_config
 import psycopg
+
 config_crate_baza = load_config()
 baza = config_crate_baza.DBConfig.dbName
 user = config_crate_baza.DBConfig.dbUser
@@ -9,17 +10,10 @@ password = config_crate_baza.DBConfig.dbPassword
 connection = psycopg.connect(dbname=baza,
                                  user=user,
                                  password=password)
-connection.autocommit = True
 cursor = connection.cursor()
-sql = ("""
-    CREATE TABLE podpiska (
-        id BIGSERIAL PRIMARY KEY,
-        fk_id_user BIGINT REFERENCES users(id) NULL,
-        podpiska BOOLEAN NULL,
-        data_podpiska TIMESTAMP NULL,
-        tovarov INT NULL
-    );
-""")
+connection.autocommit = True
+#sql = 'CREATE DATABASE MarketBot_ifw8e9238f0sd0j9eur029u3fj09we8jfsedf0s9ew0e9'
+sql = 'CREATE DATABASE marketbot'
 cursor.execute(sql)
 connection.commit()
 cursor.close()

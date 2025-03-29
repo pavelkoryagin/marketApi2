@@ -1,10 +1,9 @@
-from bot.config.config import load_config
+from config.config import load_config
 import psycopg
 config_crate_baza = load_config()
 baza = config_crate_baza.DBConfig.dbName
 user = config_crate_baza.DBConfig.dbUser
 password = config_crate_baza.DBConfig.dbPassword
-
 
 
 connection = psycopg.connect(dbname=baza,
@@ -13,20 +12,13 @@ connection = psycopg.connect(dbname=baza,
 connection.autocommit = True
 cursor = connection.cursor()
 sql = ("""
-    CREATE TABLE tovar (
+    CREATE TABLE magazin (
         id BIGSERIAL PRIMARY KEY,
-        fk_id_user BIGINT REFERENCES users(id) NULL,
-        fk_id_magazin INTEGER REFERENCES magazin(id) NULL,
-        url TEXT NULL,
-        url_parsing TEXT NULL,
-        artikul VARCHAR(50) NULL,
-        zena INTEGER NULL,
-        zena_new INTEGER NULL,
-        data TIMESTAMP NULL
-    )
+        name VARCHAR(50) NULL,
+        url VARCHAR(50) NULL
+    );
 """)
 cursor.execute(sql)
 connection.commit()
 cursor.close()
 connection.close()
-#data TIMESTAMP WITH TIME ZONE NULL

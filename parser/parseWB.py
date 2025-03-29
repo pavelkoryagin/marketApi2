@@ -1,12 +1,7 @@
-import asyncio
-from asyncio import CancelledError
-from asyncio import Semaphore
-from aiohttp import ClientSession, InvalidUrlClientError
+from aiohttp import InvalidUrlClientError
 import aiohttp
 from fake_useragent import UserAgent
 import random
-from bot.db.parseDB import ParseDB
-import time
 
 
 class ParseWB:

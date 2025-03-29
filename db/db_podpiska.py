@@ -1,4 +1,4 @@
-from bot.config.config import load_config
+from config.config import load_config
 import psycopg
 config_crate_baza = load_config()
 baza = config_crate_baza.DBConfig.dbName
@@ -12,12 +12,13 @@ connection = psycopg.connect(dbname=baza,
 connection.autocommit = True
 cursor = connection.cursor()
 sql = ("""
-    CREATE TABLE users (
+    CREATE TABLE podpiska (
         id BIGSERIAL PRIMARY KEY,
-        user_id BIGINT NULL,
-        data_registration DATE NULL,
-        blok_bot BOOLEAN NULL
-    ); 
+        fk_id_user BIGINT REFERENCES users(id) NULL,
+        podpiska BOOLEAN NULL,
+        data_podpiska TIMESTAMP NULL,
+        tovarov INT NULL
+    );
 """)
 cursor.execute(sql)
 connection.commit()

@@ -1,6 +1,5 @@
-import psycopg
 import datetime
-from bot.entity.podpiska import Podpiska
+from entity.podpiska import Podpiska
 
 class User:
     def __init__(self, user_id: int, data_registration: datetime, blok: bool, podpiska: Podpiska):

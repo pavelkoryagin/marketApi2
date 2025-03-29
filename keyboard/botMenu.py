@@ -1,7 +1,7 @@
 from aiogram import Bot
 from aiogram.types import BotCommand
 import logging
-from bot.error.log_files import DebugFilter
+from error.log_files import DebugFilter
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)

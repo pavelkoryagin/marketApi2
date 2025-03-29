@@ -4,18 +4,16 @@ import sys
 from asyncio import WindowsSelectorEventLoopPolicy
 
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
-from bot.hendlers.apsched import parsing_magazines
-from bot.hendlers.rassilka import rassilka
-from bot.config.config import Config, load_config
-from bot.db.db_connect import dbConnection, adbConnection
+from hendlers.apsched import parsing_magazines
+from hendlers.rassilka import rassilka
+from config.config import Config, load_config
+from db.db_connect import dbConnection, adbConnection
 from aiogram import Bot, Dispatcher
 from aiogram.client.default import DefaultBotProperties
 from aiogram.enums import ParseMode
-from bot.error.log_files import DebugFilter
-from bot.keyboard.botMenu import set_mein_menu
-from bot.hendlers import message, hendlersStart, hendlertovar, blokBotUser, clear, help, moitovari, podpiska
-
-from bot.midlevares.podpiskaMiddleware import PodpiskaMiddleware
+from error.log_files import DebugFilter
+from keyboard.botMenu import set_mein_menu
+from hendlers import moitovari, hendlersStart, help, message, blokBotUser, hendlertovar, clear
 
 
 async def main():
@@ -36,7 +34,7 @@ async def main():
     #Добавляем хэндлер к логеру
     logger.addHandler(error)
     #Пишем логи в файл
-    error_file = logging.FileHandler('bot/error/logs.log', 'w', encoding='utf-8')
+    error_file = logging.FileHandler('error/logs.log', 'w', encoding='utf-8')
     error_file.setLevel(logging.DEBUG)
     error_file.addFilter(DebugFilter())
     error_file.setFormatter(formatter)
