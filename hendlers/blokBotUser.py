@@ -1,7 +1,7 @@
 from aiogram.filters import ChatMemberUpdatedFilter, KICKED
 from aiogram.types import ChatMemberUpdated
 from aiogram import Router
-from db.dbEntity.userDB import UserDb
+from dbEntity.userDB import UserDb
 
 
 blokBotUser: Router = Router()

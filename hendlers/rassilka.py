@@ -1,6 +1,6 @@
 import concurrent.futures
 import asyncio
-from db.dbEntity.tovarDB import TovarDB
+from dbEntity.tovarDB import TovarDB
 
 async def zapros_rassilka(pool, logger):
     tovarDB = TovarDB(pool, logger)

@@ -1,9 +1,9 @@
 from typing import Any, Awaitable, Callable, Dict
 from aiogram import BaseMiddleware
 from aiogram.types import TelegramObject, User
-from db.dbEntity.tovarDB import TovarDB
-from db.dbEntity.podpiskaDB import PodpiskaDB
-from db.dbEntity.userDB import UserDb
+from dbEntity.tovarDB import TovarDB
+from dbEntity.podpiskaDB import PodpiskaDB
+from dbEntity.userDB import UserDb
 
 
 class PodpiskaMiddleware(BaseMiddleware):

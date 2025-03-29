@@ -1,14 +1,13 @@
 import asyncio
-import sys
 import concurrent.futures
 import psycopg
-from db.dbEntity.userDB import UserDb
-from db.dbEntity.magazinDB import MagazinDB
-from db.dbEntity.tovarDB import TovarDB
+from dbEntity.userDB import UserDb
+from dbEntity.magazinDB import MagazinDB
+from dbEntity.tovarDB import TovarDB
 import re
 from parser.parseWB import ParseWB
 from parser.parserOzon import ParseOzon
-from db.dbEntity.podpiskaDB import PodpiskaDB
+from dbEntity.podpiskaDB import PodpiskaDB
 
 
 class Tovar:

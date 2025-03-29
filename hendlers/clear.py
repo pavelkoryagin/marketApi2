@@ -1,7 +1,7 @@
 from aiogram.filters.command import Command
 from aiogram.types import Message, CallbackQuery
-from db.dbEntity.tovarDB import TovarDB
-from db.dbEntity.userDB import UserDb
+from dbEntity.tovarDB import TovarDB
+from dbEntity.userDB import UserDb
 from aiogram import Router, F
 from keyboard.buttonTovar import keyboardAddTovar, DeleteOneTovarCallbackFactory
 

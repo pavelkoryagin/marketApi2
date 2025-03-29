@@ -2,8 +2,8 @@ import psycopg
 from aiogram import Router
 from aiogram.filters.command import Command
 from aiogram.types.message import Message
-from db.dbEntity.tovarDB import TovarDB
-from db.dbEntity.userDB import UserDb
+from dbEntity.tovarDB import TovarDB
+from dbEntity.userDB import UserDb
 from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from keyboard.buttonTovar import keyboarDeleteVseTovares, keyboardAddTovar, DeleteOneTovarCallbackFactory
 
