@@ -7,7 +7,7 @@ logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
 formatter = logging.Formatter(fmt='[%(asctime)s] #%(levelname)-8s %(filename)s:'
                                   '%(lineno)d - %(name)s:%(funcName)s - %(message)s')
-error_file = logging.FileHandler('./bot/error/logsmenu.log', 'w', encoding='utf-8')
+error_file = logging.FileHandler('./error/logsmenu.log', 'w', encoding='utf-8')
 error_file.addFilter(DebugFilter())
 error_file.setFormatter(formatter)
 logger.addHandler(error_file)
